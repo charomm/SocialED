@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titulo %}
+Inicio - SocialED
+{% endblock %}
+{% block contenido %}
+<h2>Errores encontrados:</h2>
+
+<div>
+    <form action="{{ next }}" method="get">
+        <p><h2>{{ error_message }}</h2></p>
+        <div class="inputs">
+            <input id="next" name="next" type="submit" value="Continue"/>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -33,6 +33,11 @@ h1 {
    color:magenta;
    font-size:20pt;
 }
+h2 {
+  color:red;
+  font-size:15pt;
+}
+
 form {
   margin-top: 20px;
   background-color:#FAFFFE;

@@ -101,23 +101,29 @@ def process_missingFields(campos, next_page):
     return render_template("missingFields.html", inputs=campos, next=next_page)
 
 @app.route('/', methods=['GET'])
+@app.route('/index', methods=['GET'])
 def index():
-    return render_template('index.html')
+    if 'user_name' in session:
+        logged = True
+        nickname = session['user_name']
+    else:
+        logged = False
+        nickname = ''
+    return render_template('index.html', logged=logged, nickname=nickname)
 
 
 @app.route('/home', methods=['GET'])
 def home():
     return render_template('home.html')
 
-
 @app.route('/login', methods=['GET'])
 def login():
-    return render_template('login.html')
+    return app.send_static_file('login.html')
 
 
 @app.route('/signup', methods=['GET'])
 def signup():
-    return render_template('signup.html')
+    return app.send_static_file('signup.html')
 
 
 @app.route('/processLogin', methods=['GET', 'POST'])

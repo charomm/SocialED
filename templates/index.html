@@ -5,8 +5,12 @@ SocialED
 {% block contenido %}
 <h1>Hola, Has llegado hasta SocialED</h1>
 <div>
-    <p>Escoge <b>Registro</b> si eres un nuevo usuario</p>
-    <p>Elige <b>Acceso</b> si quieres acceder a SocialED</p>
-    <p>Selecciona <b>Inicio</b> para comenzar a realizar aportaciones</p>
+    {% if logged %}
+        <p>Ya puedes ir a  <b>Inicio</b> para comenzar a realizar aportaciones</p>
+    {% else %}
+        <p>Escoge <b>Registro</b> si eres un nuevo usuario</p>
+        <p>Elige <b>Acceso</b> si quieres acceder a SocialED</p>
+        <p>Selecciona <b>Inicio</b> para comenzar a realizar aportaciones</p>
+    {% endif %}
 </div>
 {% endblock %}

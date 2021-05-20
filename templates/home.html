@@ -3,11 +3,18 @@
 Inicio - SocialED
 {% endblock %}
 {% block contenido %}
-    <h1>Hola internauta, Qué tal estás?</h1>
+    <a href="/">SocialED</a> | <a href="profile">Perfil</a> | <a href="login">Salir {{nickname}}</a>
+    <br><br>
+    <h1>Hola {{ nickname}}, Qué tal estás ?</h1>
     <div>
-        <form action="processHome" method="post" name="home">
-            <label for="message">Escribe algo...</label>
-            <div class="inputs">
+        <form action="home" method="post" name="envio">
+            <div id="left">
+                <label for="message">Escribe algo...</label>
+                <div class="inputs">
+                    {% for message in messages %}
+                    <li> {{ message[1] }}</li>
+                    {% endfor %}
+                </div>
                 <input id="message" name="message" required="true"
                        placeholder="Aquí tus bellas palabras..." maxlength="128" size="80"
                        type="text" value=""/>
@@ -18,4 +25,18 @@ Inicio - SocialED
             </div>
         </form>
     </div>
+    <div id="right">
+        <form>
+            <label for="post">
+                Cosas de tus amistades...:
+            </label>
+            <div class="inputs">
+                {% for message in friends_messages %}
+                <li> {{ message[0] }}: {{ message[2] }}</li>
+                {% endfor %}
+            </div>
+
+        </form>
+    </div>
+
 {% endblock %}

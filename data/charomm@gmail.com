@@ -1,1 +1,1 @@
-{"user_name": "Charo", "password": "123456", "messages": [], "email": "charomm@gmail.com", "friends": []}
+{"user_name": "Charo", "password": "123456", "messages": ["Esto es una prueba", "Segunda prueba"], "email": "charomm@gmail.com", "friends": ["jose@gmail.com"]}

@@ -44,8 +44,36 @@ form {
   border: 2px solid rgb(162, 0, 255);
   padding: 20px;
 }
+
 .inputs {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 5px;
+}
+
+#pie {
+  background-color: #d5f6ff;
+  border: 2px solid black;
+  color: #2A2929; /* dark grey */
+  margin: 10px;
+  text-align: center;
+  padding: 0px;
+}
+#pie  p{
+  font-size:10pt;
+  font-style: normal;
+  font-weight: bold;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+#indice{
+  text-align: center;
+}

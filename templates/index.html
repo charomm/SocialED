@@ -3,10 +3,23 @@
 SocialED
 {% endblock %}
 {% block contenido %}
-<h1>Hola, Has llegado hasta SocialED</h1>
+<a href="/">SocialED </a>|
+{% if logged %}
+<a href="home">Inicio</a> |
+<a href="profile">
+    Perfil
+</a>
+|
+<a href="logout">
+    Salir ({{ nickname }})
+</a>
+{% else %}
+<a href="login">Acceso </a>| <a href="signup">Registro</a>
+{% endif %}
+<h1>Hola {{ nickname }} has llegado hasta SocialED</h1>
 <div>
     <p>Escoge <b>Registro</b> si eres un nuevo usuario</p>
-    <p>Elige <b>Acceso</b> si quieres acceder a SocialED</p>
-    <p>Selecciona <b>Inicio</b> para comenzar a realizar aportaciones</p>
+    <p>Elige <b>Acceso</b> si eres nuevo en SocialED</p>
+    <p>Selecciona <b>Inicio</b> comenzar a realizar aportaciones</p>
 </div>
 {% endblock %}
